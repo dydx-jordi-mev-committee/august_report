@@ -11,7 +11,7 @@ In order to replicate the initial steps we do when analyzing a block with high d
 
 - Once we have a block with high order book discrepancy, we pull the logs from our node.
 - With those logs, using the streamlit app, we can see the traders and their matches, price and volume.
-- We take query_1.sql, and look for our block number, execute it using numia. This way, we obtain the maker and taker trade_id.
+- We take query_1.sql, and look for our block number, execute it using numia. This way, we obtain the maker and taker trade_id. As an additional check, uploading this data to the streamlit app will show the same results as the BP matches of the JSON file for a specific block.
 - With the different traders and trade IDs, we look at query_2.sql which queries the mempool via Numia and we filter by the specific trade_ids, trader, and market. We can then see the arrival time at the mempool according to Numia.
 - Taking all the previous information, we dig deeper or stay at a surface level trying to understand why the matches took place the way they occured.
 
